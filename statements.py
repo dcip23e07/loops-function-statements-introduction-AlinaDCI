@@ -2,11 +2,12 @@
 current_bal = 500
 min_withdrawal = 20
 max_withdrawal = 1000
-withdrawalamount = 0
 
 #Exit function
 def exit():
     print ("Thank you for choosing our bank! Have a good day!")
+
+#Transaction function
 def transaction(current_bal):
     while True:
         cashamount:int = int(input("Enter cash amount to be withdrawn: "))
@@ -20,12 +21,12 @@ def transaction(current_bal):
         elif cashamount > current_bal:
             print("Transaction failed. Insufficient funds")
             break
-
         else:
             break
     return current_bal
 
-user_input=input("Do you want to withdraw cash? Enter y or n:")
+#Main code
+user_input=input("Do you want to withdraw cash? Enter y or n: ")
 if user_input=="y":
     result = transaction(current_bal)
 else:
